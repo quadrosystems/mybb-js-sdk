@@ -7,12 +7,12 @@
     } else if(typeof define === 'function' && define.amd) {
         // AMD
         define('mybb-sdk', [], function() {
-            global.API = factory(global);
-            return global.API;
+            global.MybbSDK = factory(global);
+            return global.MybbSDK;
         });
     } else {
         // Browser global
-        global.API = factory(global);
+        global.MybbSDK = factory(global);
     }
 }(this, function(context) {
     'use strict';
@@ -110,9 +110,53 @@
     Method.prototype.build = function() {};
     Method.prototype.request = function() {};
 
+    var RequestFactory = function() {
+        this.instances = {};
+        this.registry = {
+            'jquery': RequestJQuery,
+            'xhr': RequestXhr,
+            'node': RequestNode
+        };
+    };
 
-    var RequestJQuery = function(options, params, callback){};
-    var RequestXhr = function(options, params, callback){};
+    RequestFactory.prototype.getInstance = function(name) {
+        if (typeof this.instances[name] == 'undefined') {
+            this.instances[name] = this.registry[name];
+        }
+
+        return this.instances[name];
+    };
+
+    var RequestXhr = function(options, params, callback){
+        var _params = '';
+
+        for (var key in params) if (params.hasOwnProperty(key)) {
+            _params += key + '=' + params[key] + '&';
+        }
+
+        var url = [options.protocol, '//', options.host, options.path, '?', _params].join(''),
+            xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState != 4) return;
+            callback && callback(JSON.parse(xhr.responseText));
+        };
+        xhr.send(null);
+    };
+
+    var RequestJQuery = function(options, params, callback){
+        context.$.ajax({
+            dataType: "json",
+            url: [options.protocol, '//', options.host, options.path].join(''),
+            data: params,
+            method: 'GET',
+            success: callback.bind(null),
+            error: function(err) {
+                console.log(err);
+            }
+        });
+    };
+
     var RequestNode = function(options, params, callback){
         options.path += '?' + require('querystring').stringify(params);
         var req = require(options.port == 80 && 'http' || 'https').request(options, function(res) {
@@ -134,23 +178,6 @@
             console.log(err);
         });
         req.end();
-    };
-
-    var RequestFactory = function() {
-        this.instances = {};
-        this.registry = {
-            'jquery': RequestJQuery,
-            'xhr': RequestXhr,
-            'node': RequestNode
-        };
-    };
-
-    RequestFactory.prototype.getInstance = function(name) {
-        if (typeof this.instances[name] == 'undefined') {
-            this.instances[name] = this.registry[name];
-        }
-
-        return this.instances[name];
     };
 
 //    Api.prototype = Methods.registry;
