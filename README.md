@@ -13,7 +13,7 @@ MyBB Api version: 0.1
 ## Использование
 
 ### В браузере
-Для выполнения API-запросов библиотека использует XhrHttpRequest() или вендора jQuery, экспортированного в Window, при ее наличии.
+Для выполнения API-запросов библиотека использует XMLHttpRequest() или вендора jQuery, экспортированного в Window, при ее наличии.
 
 ```
 var Api = new MybbApiSDK('http://forum.mybb.ru/');
