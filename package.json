@@ -1,0 +1,26 @@
+{
+  "name": "mybb-js-sdk",
+  "version": "0.2",
+  "description": "mybb-js-sdk",
+  "main": "src/sdk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdusalamov/mybb-js-sdk.git"
+  },
+  "keywords": [
+    "mybb"
+  ],
+  "author": "Renat Abdusalamov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdusalamov/mybb-js-sdk/issues"
+  },
+  "homepage": "https://github.com/abdusalamov/mybb-js-sdk#readme",
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
+    "eslint": "^7.9.0"
+  }
+}
