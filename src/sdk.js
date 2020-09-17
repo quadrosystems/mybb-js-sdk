@@ -2,10 +2,8 @@
   'use strict';
 
   if (typeof exports !== 'undefined') {
-    // Node/CommonJS
     module.exports = factory(global);
   } else {
-    // Browser global
     global.MybbSDK = factory(global);
   }
 }(this, function(context) {

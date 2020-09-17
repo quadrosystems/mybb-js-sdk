@@ -1,7 +1,7 @@
 {
-  "name": "mybb-js-sdk",
+  "name": "mybb-sdk",
   "version": "0.2",
-  "description": "mybb-js-sdk",
+  "description": "mybb-sdk",
   "main": "src/sdk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,8 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "eslint": "^7.9.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
