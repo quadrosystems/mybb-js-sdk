@@ -1,6 +1,6 @@
 {
   "name": "mybb-sdk",
-  "version": "0.2",
+  "version": "0.2.0",
   "description": "mybb-sdk",
   "main": "src/sdk.js",
   "scripts": {

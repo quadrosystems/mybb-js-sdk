@@ -19,7 +19,7 @@
   }
 
   var Api = function(host) {
-    this.version = '0.2';
+    this.version = '0.2.0';
     this.originalHost = host;
     this.hostname = undefined;
     this.protocol = undefined;
