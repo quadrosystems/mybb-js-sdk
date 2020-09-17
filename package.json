@@ -13,7 +13,7 @@
   "keywords": [
     "mybb"
   ],
-  "author": "Renat Abdusalamov",
+  "author": "Renat Abdusalamov <renat@abdusalamov.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/abdusalamov/mybb-js-sdk/issues"
