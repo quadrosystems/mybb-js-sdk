@@ -174,6 +174,9 @@ class MybbSDK {
     params.push('charset=' + this.charset);
 
     for (const key in requestParams) {if (requestParams.hasOwnProperty(key)) {
+      if (typeof requestParams[key] === 'undefined') {
+        continue;
+      }
       const value = Array.isArray(requestParams[key]) ? requestParams[key].map(encodeURIComponent).join(',') : encodeURIComponent(requestParams[key]);
       params.push(key + '=' + value);
     }}
