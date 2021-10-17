@@ -81,7 +81,7 @@ export type GetTopicsParams = {
   topic_id?: number | number[],
   exclude_forum?: number | number[],
   fields?: string | string[],
-  sort_by?: 'id' | 'posted' | 'last_post',
+  sort_by?: 'id' | 'posted' | 'last_post' | 'sticky_first',
   sort_dir?: 'asc' | 'desc',
   skip?: number,
   limit?: number
