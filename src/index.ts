@@ -138,7 +138,7 @@ class MybbSDK {
   }
 
   storageFlush() {
-    return this.call('storage.delete', {
+    return this.call('storage.flush', {
       token: this.token
     });
   }
