@@ -21,13 +21,14 @@ npm install mybb-sdk
 ### В браузере
 Для выполнения API-запросов библиотека использует XMLHttpRequest() или вендора jQuery, экспортированного в Window, при ее наличии.
 
-```
+```javascript
 var mybb = new MybbSDK('https://forum.mybb.ru/', {
   format: 'json',
   charset: 'utf-8'
 });
+```
 
-# callbacks
+```javascript
 mybb.call('users.get', {
     user_id: 2
 }, function(result) {
@@ -35,8 +36,10 @@ mybb.call('users.get', {
 }, function(err) {
     console.log(err);
 });
+```
 
-# promises
+promises
+```javascript
 mybb.call('users.get', {
   user_id: 2
 })
@@ -46,25 +49,30 @@ mybb.call('users.get', {
 .catch(function(err) {
     console.log(err);
 });
+```
 
-# async/await
-try {
-  const users = mybb.call('users.get');
-  console.log(users);
-} catch (e) {
-  console.error(e);
+async/await
+```javascript
+async function() {
+  try {
+    const users = await mybb.call('users.get');
+    console.log(users);
+  } catch (e) {
+    console.error(e);
+  }
 }
 ```
 В качестве адреса форума можно указать любую URL-подобную строку. Все методы API можно получить по адресу https://mybb.ru/forumapi/
 
 ### В NodeJS
-```
+```javascript
 var MybbSDK = require('mybb-sdk');
 ```
 Дальше как описано выше
 
+
 ### Доступные методы:
-```
+```javascript
 setToken(token: string)
 withHash(hash: string)
 getBoard(params?: GetBoardParams)
