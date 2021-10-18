@@ -3,14 +3,14 @@ mybb-sdk
 
 MyBB Api version: 0.9
 
-[![](https://data.jsdelivr.com/v1/package/npm/mybb-sdk/badge)](https://www.jsdelivr.com/package/npm/mybb-sdk)
+[![](https://data.jsdelivr.com/v1/package/npm/@quadrosystems/mybb-sdk/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk)
 
 ## Что это?
 Это JavaScript библиотека для работы с Mybb API.
 
 ## Установка
 
-Минифицированную версию можно скачать [здесь](https://www.jsdelivr.com/package/npm/mybb-sdk).
+Минифицированную версию можно скачать [здесь](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk).
 
 ```
 npm install mybb-sdk
