@@ -13,11 +13,12 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
+          scope: '@quadrosystems'
       - name: Installing dependencies
         run: yarn install
       - name: Building application
         run: yarn transpile
       - name: Publishing package
-        run: npm publish
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

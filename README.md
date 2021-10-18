@@ -10,7 +10,7 @@ MyBB Api version: 0.9
 
 ## Установка
 
-Минифицированную версию можно скачать [здесь](#).
+Минифицированную версию можно скачать [здесь](https://www.jsdelivr.com/package/npm/mybb-sdk).
 
 ```
 npm install mybb-sdk
@@ -19,7 +19,6 @@ npm install mybb-sdk
 ## Использование
 
 ### В браузере
-Для выполнения API-запросов библиотека использует XMLHttpRequest() или вендора jQuery, экспортированного в Window, при ее наличии.
 
 ```javascript
 var mybb = new MybbSDK('https://forum.mybb.ru/', {
