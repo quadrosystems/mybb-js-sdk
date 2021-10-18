@@ -1,7 +1,7 @@
 {
-  "name": "mybb-sdk",
-  "version": "0.9.5",
-  "description": "mybb-sdk",
+  "name": "@quadrosystems/mybb-sdk",
+  "version": "0.9.6",
+  "description": "sdk for mybb.ru",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -11,20 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdusalamov/mybb-js-sdk.git"
+    "url": "git+https://github.com/quadrosystems/mybb-js-sdk.git"
   },
   "keywords": [
     "mybb"
   ],
-  "author": {
-    "name": "Renat Abdusalamov",
-    "email": "renat@abdusalamov.com"
-  },
+  "author": "Renat Abdusalamov <renat@abdusalamov.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abdusalamov/mybb-js-sdk/issues"
+    "url": "https://github.com/quadrosystems/mybb-js-sdk/issues"
   },
-  "homepage": "https://github.com/abdusalamov/mybb-js-sdk#readme",
+  "homepage": "https://github.com/quadrosystems/mybb-js-sdk#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-umd": "7.14.5",
@@ -79,5 +76,8 @@
   "dependencies": {
     "es6-promises": "^1.0.10",
     "isomorphic-fetch": "^3.0.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
