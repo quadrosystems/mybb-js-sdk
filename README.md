@@ -13,7 +13,7 @@ MyBB Api version: 0.9
 Минифицированную версию можно скачать [здесь](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk).
 
 ```
-npm install mybb-sdk
+npm install @quadrosystems/mybb-sdk
 ```
 
 ## Использование
@@ -65,7 +65,7 @@ async function() {
 
 ### В NodeJS
 ```javascript
-var MybbSDK = require('mybb-sdk');
+var MybbSDK = require('@quadrosystems/mybb-sdk');
 ```
 Дальше как описано выше
 
