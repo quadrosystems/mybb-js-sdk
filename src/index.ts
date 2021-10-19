@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import fetch from 'cross-fetch';
 import {CharsetType, FormatType,
   GetBoardParams,
   GetFileMetadataParams, GetForumParams, GetOnlineUsersParams, GetPostParams, GetPostVotesParams, GetRecentParams,
@@ -185,7 +185,9 @@ class MybbSDK {
       method: requestObject.method || 'GET',
       headers: {
         Cookie: this.hash ? `mybb_ru=${this.hash}` : undefined
-      }
+      },
+      mode: "cors",
+      credentials: "same-origin"
     }).then(response => this.format === 'json' ? response.json() : response.text());
   }
 }
