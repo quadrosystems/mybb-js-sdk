@@ -1,8 +1,6 @@
 mybb-sdk
 ===========
 
-MyBB Api version: 0.9
-
 [![](https://data.jsdelivr.com/v1/package/npm/@quadrosystems/mybb-sdk/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk)
 
 ## Что это?
@@ -10,7 +8,7 @@ MyBB Api version: 0.9
 
 ## Установка
 
-Минифицированную версию можно скачать [здесь](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk).
+Минифицированную версию можно скачать на [jsdelivr.com](https://www.jsdelivr.com/package/npm/@quadrosystems/mybb-sdk).
 
 ```
 npm install @quadrosystems/mybb-sdk

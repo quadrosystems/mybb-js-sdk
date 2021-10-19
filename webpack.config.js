@@ -3,14 +3,16 @@ const path = require('path');
 module.exports = {
   entry: './src/index.ts',
   mode: 'development',
-  externals: {
-    fetch: {
-      root: 'fetch',
-      commonjs2: 'isomorphic-fetch',
-      commonjs: 'isomorphic-fetch',
-      amd: 'isomorphic-fetch'
-    },
-  },
+  externals: [
+    {
+      'cross-fetch': {
+        root: 'fetch',
+        commonjs2: 'cross-fetch',
+        commonjs: 'cross-fetch',
+        amd: 'cross-fetch'
+      }
+    }
+  ],
   externalsType: 'umd',
   module: {
     rules: [
@@ -27,6 +29,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: 'index.js',
+    globalObject: 'this',
     library: 'MybbSDK',
     libraryTarget: 'umd',
     libraryExport: 'default',

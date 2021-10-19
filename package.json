@@ -1,11 +1,12 @@
 {
   "name": "@quadrosystems/mybb-sdk",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "sdk for mybb.ru",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "clean": "rm -rf lib",
+    "build:dev": "webpack --watch --mode development",
     "build:webpack": "webpack --mode production",
     "transpile": "NODE_ENV=production run-s clean build:webpack"
   },
@@ -74,8 +75,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "es6-promises": "^1.0.10",
-    "isomorphic-fetch": "^3.0.0"
+    "cross-fetch": "^3.1.4",
+    "es6-promises": "^1.0.10"
   },
   "directories": {
     "lib": "lib"
